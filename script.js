@@ -1,7 +1,10 @@
-// Pega o botão pelo ID (igual você fez com o resultado)
-let botao = document.getElementById("meuBotao");
+// Aula 1 - Calculo
+var resultado = 10 * 100;
+var divLocal = document.getElementById('exibe_resultado');
+divLocal.innerHTML += resultado;
 
-// Quando clicar, adiciona a classe amarelo no body
+// Aula 2 - Botao amarelo
+let botao = document.getElementById("meuBotao");
 botao.addEventListener("click", function() {
   document.body.classList.toggle("amarelo");
 });
