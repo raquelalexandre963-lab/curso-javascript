@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora IMC - Estácio</title>
+</head>
+<body>
+  <h2>Estruturas de Decisão na Prática</h2>
+  <input type="number" id="peso" placeholder="Peso Ex: 70">
+  <input type="number" id="altura" step="0.01" placeholder="Altura Ex: 1.75">
+  <button onclick="calcular()">Calcular</button>
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+  <script>
+    function calcular() {
+      const peso = parseFloat(document.getElementById('peso').value);
+      const altura = parseFloat(document.getElementById('altura').value);
+      const valor = imc(peso, altura);
+      document.getElementById('resultado').innerHTML = `IMC: ${valor.toFixed(2)} - ${situacao(valor)}`;
+    }
+  </script>
+</body>
+</html>
